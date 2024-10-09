@@ -22,7 +22,9 @@ public class LionTest {
     @Test
     public void getKittensTest() {
         Lion lion = new Lion(feline);
-        Mockito.when(lion.getKittens()).thenReturn(1);
+        Mockito.when(feline.getKittens()).thenReturn(1);
+        int expected = 1;
+        assertEquals(expected, lion.getKittens());
     }
 
     @Test
